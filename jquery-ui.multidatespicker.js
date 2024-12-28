@@ -575,6 +575,13 @@
 				};
 			}
 
+			if (this.multiDatesPicker) {
+				const options = this.multiDatesPicker;
+				if (options.mode === 'enableSelectedDates' && options.showEnableResetBtns) {
+					methods.addControls.call(this);
+				}
+			}
+
 			if(methods[method]) {
 				var exec_result = methods[method].apply(this, Array.prototype.slice.call(mdp_arguments, 1));
 				switch(method) {
